@@ -9,6 +9,7 @@ event/
 *.cod.bz2
 *.bak
 cdw-data-reports/
+cdw-viewership-reports/
 test-array.sh
 build/
 loop.sh
