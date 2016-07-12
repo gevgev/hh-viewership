@@ -179,4 +179,5 @@ rm -fr "$output_files_dir"
 rm -fr "$data_downloader_status_log_dir"
 rm -fr "$base_folder"
 rm -fr "$data_download_destination"
+rm -fr cdw-viewership-reports/
 
