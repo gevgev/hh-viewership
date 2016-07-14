@@ -13,17 +13,22 @@ Steps:
       - 500GB EBS
       - daap-s3-role
       - default security group (default VPC)
-      - yum install -y tree
       - Setup:
-        - /data
-        - chown ec2-user:ec2-user /data
+          - ./configure.sh
+            - /data
+            - chown ec2-user:ec2-user /data
+            - yum install -y tree
   3. Deploy:
       - archive.zip from build-ec2.sh --> /data
       - working dir
       - unzip archive.zip under working
-      - adjust the date raneg for loop.sh
-      - nohup ./loop.sh &
-  4. Monitor:
+  4. Run:
+      - A. Single day:
+          - nohup ./run-hh-viewership.sh <AWS_ACCESS_KEY_ID> <AWS_SECRET_ACCESS_KEY> rovi-cdw data_downloader_tracker.txt cdw_downloads_logs input_compressed_cdw_data cdw-data-reports tv_viewership.cod event/tv_viewership mso-list.csv <20160702> &
+      - B. Range of days:
+        - adjust the date range inside loop.sh (FOR loop)
+        - nohup ./loop.sh &
+  5. Monitor:
       - tail nohup.out
       - tree events
       - tree cdw-data-reports
