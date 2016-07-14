@@ -9,7 +9,7 @@ Steps:
       - daap-s3-role
       - default security group (default VPC)
       - yum install -y tree
-      Setup:
+      - Setup:
         - /data
         - chown ec2-user:ec2-user /data
   3. Deploy:
