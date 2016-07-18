@@ -7,7 +7,7 @@ Steps:
         - inside loop.sh replace with values: 
           - AWS_ACCESS_KEY_ID
           - AWS_SECRET_ACCESS_KEY
-      $> ./build-ec2.sh
+          - $> ./build-ec2.sh
   2. Launch ec2 instance:
       - c4.2xlarge
       - 500GB EBS
