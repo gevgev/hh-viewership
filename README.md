@@ -1,6 +1,16 @@
 # hh-viewership
 
 Steps:
+
+For data-pipeline:
+  1. Build/package for aws data pipeline:
+      - ./build-data-pipeline.sh
+      - it will push the artifacts to s3://.../data-pipeline/hh-viewership bucket
+  2. Execute the ./loop.sh AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY within the data pipeline
+      - It will first run ./precondition to identify the available data and last run dates
+      - Next it will execute the loop with the ./run script, pasisng the date and AWS key/secret
+
+For ec-2:
   1. Build/package for ec2 linux:
       - Prep:
         - cp loop-secure.sh loop.sh

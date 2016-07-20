@@ -23,10 +23,19 @@ rc=$?; if [[ $rc != 0 ]]; then
 	exit $rc; 
 fi
 
+echo "Build precondition"
+GOOS=linux go build -v github.com/gevgev/precondition
+
+rc=$?; if [[ $rc != 0 ]]; then 
+	echo "Build failed: precondition"
+	cd ..
+	exit $rc; 
+fi
+
 echo "Copying script and mso list"
 cp ../run-ubuntu-hh-viewership.sh run.sh
 cp ../mso-list-full.csv mso-list.csv
-cp ../loop.sh loop.sh
+cp ../run-pipeline.sh loop.sh
 
 echo "Pushing to S3"
 

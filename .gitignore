@@ -18,3 +18,4 @@ viewership/build-viewership/
 viewership/loop-viewership.sh
 build-ec2/
 build-data-pipeline/
+precondition
