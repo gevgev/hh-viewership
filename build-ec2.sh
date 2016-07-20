@@ -35,7 +35,7 @@ fi
 echo "Copying script and mso list"
 cp ../run-ubuntu-hh-viewership.sh run.sh
 cp ../mso-list-full.csv mso-list.csv
-cp ../loop.sh loop.sh
+cp ../run-pipeline.sh loop.sh
 
 echo "Archiving"
 
