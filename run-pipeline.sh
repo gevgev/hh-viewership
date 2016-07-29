@@ -26,7 +26,7 @@ to=${results[3]}
 
 echo $from, $to
 
-d="$from"
+d=$(date -I -d "$from + 1 day")
 up=$(date -I -d "$to + 1 day")
 
 while [ "$d" != "$up" ]; do 
