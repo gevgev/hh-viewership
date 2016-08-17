@@ -19,3 +19,4 @@ viewership/loop-viewership.sh
 build-ec2/
 build-data-pipeline/
 precondition
+data-pipeline-mediacom/
