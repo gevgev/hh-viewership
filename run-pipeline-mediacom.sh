@@ -12,7 +12,7 @@ cdw_aws_key=$1
 cdw_aws_secret=$2
 
 #dates=$(./precondition -K "$cdw_aws_key" -S "$cdw_aws_secret")
-dates=$(./precondition -E -d daap-hh-count -dp cdw-data-reports)
+dates=$(./precondition -E -d daap-hh-count -dp cdw-data-reports -K "$cdw_aws_key" -S "$cdw_aws_secret")
 
 results=($dates)
 
