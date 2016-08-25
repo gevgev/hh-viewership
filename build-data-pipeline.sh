@@ -33,13 +33,13 @@ rc=$?; if [[ $rc != 0 ]]; then
 fi
 
 echo "Copying script and mso list"
-cp ../run-ubuntu-hh-viewership.sh run.sh
+cp ../run-ubuntu-raw-data.sh run.sh
 cp ../mso-list-full.csv mso-list.csv
 cp ../run-pipeline.sh loop.sh
 
 echo "Pushing to S3"
 
-aws s3 cp . s3://daap-pipeline/hh-viewership --recursive
+aws s3 cp . s3://daap-pipeline/cdw-raw-data --recursive
 
 echo 'Success'
 cd ..

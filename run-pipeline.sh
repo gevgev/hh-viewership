@@ -11,7 +11,7 @@ fi
 cdw_aws_key=$1
 cdw_aws_secret=$2
 
-dates=$(./precondition -K "$cdw_aws_key" -S "$cdw_aws_secret")
+dates=$(./precondition -K "$cdw_aws_key" -S "$cdw_aws_secret" -d daaprawcdwdata -dp cdw_viewership_reports)
 
 results=($dates)
 
@@ -32,7 +32,7 @@ up=$(date -I -d "$to + 1 day")
 while [ "$d" != "$up" ]; do 
   dd=$(date -d "$d" +%Y%m%d)
 
-  ./run.sh "$cdw_aws_key" "$cdw_aws_secret" rovi-cdw data_downloader_tracker.txt cdw_downloads_logs input_compressed_cdw_data cdw-data-reports tv_viewership.cod event/tv_viewership mso-list.csv "$dd"
+  ./run.sh "$cdw_aws_key" "$cdw_aws_secret" rovi-cdw data_downloader_tracker.txt cdw_downloads_logs input_compressed_cdw_data cdw_data_reports tv_viewership.cod event/tv_viewership mso-list.csv "$dd"
 
   d=$(date -I -d "$d + 1 day")
 done

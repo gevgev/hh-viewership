@@ -33,7 +33,7 @@ rc=$?; if [[ $rc != 0 ]]; then
 fi
 
 echo "Copying script and mso list"
-cp ../run-ubuntu-hh-viewership.sh run.sh
+cp ../run-ubuntu-raw-data.sh run.sh
 cp ../mso-list-full.csv mso-list.csv
 cp ../run-pipeline.sh loop.sh
 
